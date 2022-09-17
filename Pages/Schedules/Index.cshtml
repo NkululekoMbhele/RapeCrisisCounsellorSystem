@@ -1,0 +1,56 @@
+﻿@page
+@model RapeCrisisCounsellorSystem.Pages.Schedules.IndexModel
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Counsellor Availability</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule[0].Counsellor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule[0].AvailableDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule[0].startTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Schedule[0].endTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Schedule) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Counsellor.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AvailableDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.startTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.endTime)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
