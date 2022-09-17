@@ -4,7 +4,29 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container d-flex justify-content-center align-items-center" style="width: 100vw; height: 80vh">
+        <div class="row">
+            <div class="col">
+            <div class="card" style="width: 18rem; min-height: 20rem">
+                <div class="card-body">
+                    <img class="card-img-top" src="https://www.psychologistcounselor.com/wp-content/uploads/2017/03/treatment-counseling-1-300x300.png" alt="Card image cap">
+                    <hr class="mt-2 mb-3" />
+                    <div class="d-flex justify-content-center" style="width: 100%;">
+                        <a class="btn btn-primary text-center" asp-area="" asp-page="/Index">Counsellor</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col">
+            <div class="card" style="width: 18rem; min-height: 20rem">
+                <div class="card-body">
+                    <img class="card-img-top" src="https://www.psychologistcounselor.com/wp-content/uploads/2017/03/treatment-counseling-1-300x300.png" alt="Card image cap">
+                    <hr class="mt-2 mb-3" />
+                    <div class="d-flex justify-content-center" style="width: 100%;">
+                        <a class="btn btn-primary text-center" asp-area="" asp-page="/Index">Client</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
 </div>
